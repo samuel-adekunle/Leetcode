@@ -44,6 +44,12 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "cinttypes": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "list": "cpp",
+    "unordered_set": "cpp",
+    "fstream": "cpp",
+    "iostream": "cpp",
+    "istream": "cpp",
+    "sstream": "cpp"
   }
 }
