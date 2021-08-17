@@ -18,9 +18,9 @@ func Constructor(capacity int) LRUCache {
 
 func (this *LRUCache) Get(key int) int {
 	if v, ok := this.mem[key]; ok {
-		// key previously exists in cache
+		
 		this.cache.MoveToFront(v)
-		return v.Value.([2]int)[1] // k, v
+		return v.Value.([2]int)[1] 
 	}
 	return -1
 }
@@ -28,7 +28,7 @@ func (this *LRUCache) Get(key int) int {
 
 func (this *LRUCache) Put(key int, value int)  {
   if v, ok := this.mem[key]; ok {
-		// previously exists
+		
 		this.cache.MoveToFront(v)
 		v.Value = [2]int{key, value}
 	} else {

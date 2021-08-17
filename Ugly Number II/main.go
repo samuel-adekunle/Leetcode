@@ -1,17 +1,3 @@
-/* Write a program to find the n-th ugly number.
-
-Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
-
-Example:
-
-Input: n = 10
-Output: 12
-Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.
-Note:
-
-1 is typically treated as an ugly number.
-n does not exceed 1690. */
-
 package main
 
 import (
@@ -39,7 +25,7 @@ func sieve(n int) bool {
 	return false
 }
 
-// Brute force
+
 func nthUglyNumber(n int) int {
 	i := 0
 	curr := 0
@@ -90,7 +76,7 @@ func combineSlices(arr1, arr2 []int) []int {
 	return merge
 }
 
-// Merge sort - failed
+
 func triples(n int) int {
 	ugly := []int{0, 1, 2, 3, 5}
 	start := 2
@@ -119,7 +105,7 @@ func genUgly(numbers, starts, factors []int) (int, []int) {
 	return min, starts
 }
 
-// Dynamic Programming
+
 func dp(n int) int {
 	factors := []int{2, 3, 5}
 	numbers := make([]int, n)

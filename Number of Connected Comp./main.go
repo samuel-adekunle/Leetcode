@@ -6,7 +6,7 @@ func main() {
 	fmt.Println(countComponents(5, [][]int{
 		{0, 1},
 		{1, 2},
-		// {2, 3},
+		
 		{3, 4},
 	}))
 }

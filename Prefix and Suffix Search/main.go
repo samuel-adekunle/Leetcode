@@ -19,7 +19,7 @@ type WordFilter struct {
 	cache map[string]int
 }
 
-// O(len(word))
+
 func generatePrefixes(word string) (prefixes []string) {
 	for i := 1; i <= len(word); i++ {
 		prefixes = append(prefixes, word[:i])
@@ -27,7 +27,7 @@ func generatePrefixes(word string) (prefixes []string) {
 	return
 }
 
-// O(len(word))
+
 func generateSuffixes(word string) (suffixes []string) {
 	for i := 0; i < len(word); i++ {
 		suffixes = append(suffixes, word[i:])
@@ -35,7 +35,7 @@ func generateSuffixes(word string) (suffixes []string) {
 	return
 }
 
-// O(len(words) * len(word))
+
 func Constructor(words []string) WordFilter {
 	wordFilter := WordFilter{
 		prefixes: make(map[string]map[int]bool),
@@ -69,7 +69,7 @@ func max(a, b int) int {
 	return b
 }
 
-// O(len(prefixes))
+
 func (this *WordFilter) F(prefix string, suffix string) int {
 	id := fmt.Sprintf("%v#%v", prefix, suffix)
 	val, ok := this.cache[id]

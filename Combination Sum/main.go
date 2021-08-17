@@ -11,8 +11,8 @@ func main() {
 	fmt.Println(validCombinations)
 }
 
-// candidates contains distinct integers
-// assumes candidates is sorted
+
+
 func combinationSum(candidates []int, target int) [][]int {
 	sort.Slice(candidates, func(i, j int) bool {
 		return candidates[i] < candidates[j]
@@ -37,7 +37,7 @@ func combinationSum(candidates []int, target int) [][]int {
 		}
 	}
 
-	cache := map[[2]int][]int{} // key {2,5} means starts with 2 and sums to 5
+	cache := map[[2]int][]int{} 
 	var helper func([]int, int)
 	helper = func(curr []int, sum int) {
 		if sum == target {

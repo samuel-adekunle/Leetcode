@@ -21,7 +21,7 @@ func max(a, b int) int {
 	return b
 }
 
-// TLE - but correct dynamic + memoised
+
 func scheduleCourseDynamic(courses [][]int) int {
 	sort.Slice(courses, func(i, j int) bool {
 		return courses[i][1] < courses[j][1]
@@ -48,20 +48,20 @@ func scheduleCourseDynamic(courses [][]int) int {
 	return helper(0, 0)
 }
 
-// we can make it greedy by dropping some when we don't need
+
 func scheduleCourseIterative(courses [][]int) int {
 	sort.Slice(courses, func(i, j int) bool {
 		return courses[i][1] < courses[j][1]
 	})
 	count, time := 0, 0
 	for i, course := range courses {
-		// take the current course if we can
+		
 		if time+course[0] <= course[1] {
-			// log.Println(courses, count, i, time)
+			
 			count++
 			time += course[0]
 		} else {
-			// if we can't we can try to see if it's worthwhile taking it over any of the previous ones
+			
 			maxDuration, maxIndex := course[0], i
 			for j := 0; j < i; j++ {
 				if courses[j][0] > 0 && courses[j][0] > maxDuration {
@@ -70,8 +70,8 @@ func scheduleCourseIterative(courses [][]int) int {
 				}
 			}
 			time += course[0] - maxDuration
-			courses[maxIndex][0] = -1 // worst so far and should never be taken
-			// log.Println(courses, count, i, maxDuration, time)
+			courses[maxIndex][0] = -1 
+			
 		}
 	}
 	return count
