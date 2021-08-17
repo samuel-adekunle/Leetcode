@@ -21,7 +21,6 @@ func max(a, b int) int {
 	return b
 }
 
-
 func scheduleCourseDynamic(courses [][]int) int {
 	sort.Slice(courses, func(i, j int) bool {
 		return courses[i][1] < courses[j][1]
@@ -48,20 +47,19 @@ func scheduleCourseDynamic(courses [][]int) int {
 	return helper(0, 0)
 }
 
-
 func scheduleCourseIterative(courses [][]int) int {
 	sort.Slice(courses, func(i, j int) bool {
 		return courses[i][1] < courses[j][1]
 	})
 	count, time := 0, 0
 	for i, course := range courses {
-		
+
 		if time+course[0] <= course[1] {
-			
+
 			count++
 			time += course[0]
 		} else {
-			
+
 			maxDuration, maxIndex := course[0], i
 			for j := 0; j < i; j++ {
 				if courses[j][0] > 0 && courses[j][0] > maxDuration {
@@ -70,8 +68,8 @@ func scheduleCourseIterative(courses [][]int) int {
 				}
 			}
 			time += course[0] - maxDuration
-			courses[maxIndex][0] = -1 
-			
+			courses[maxIndex][0] = -1
+
 		}
 	}
 	return count

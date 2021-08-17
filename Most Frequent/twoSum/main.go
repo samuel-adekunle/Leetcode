@@ -5,10 +5,8 @@ import (
 	"log"
 )
 
-
-
 func main() {
-	nums := []int{2,7,11,15}
+	nums := []int{2, 7, 11, 15}
 	target := 9
 
 	xi := twoSum(nums, target)
@@ -16,7 +14,6 @@ func main() {
 		fmt.Printf("%d + %d = %d\n", nums[xi[0]], nums[xi[1]], target)
 	}
 }
-
 
 func twoSum(nums []int, target int) []int {
 	mem := make(map[int]int, len(nums))

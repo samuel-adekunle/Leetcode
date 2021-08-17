@@ -1,6 +1,5 @@
 package main
 
-
 func removeDuplicates(nums []int) int {
 	i := 0
 	for _, v := range nums {

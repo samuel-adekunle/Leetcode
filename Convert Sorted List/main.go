@@ -70,7 +70,7 @@ func listToSlice(head *ListNode) []int {
 }
 
 func sortedListToBST(head *ListNode) *TreeNode {
-	arr := listToSlice(head) 
+	arr := listToSlice(head)
 	var helper func(arr []int) *TreeNode
 	helper = func(arr []int) *TreeNode {
 		if len(arr) == 0 {

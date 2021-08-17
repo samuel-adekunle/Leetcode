@@ -41,7 +41,6 @@ func helper(res, l1, l2 *ListNode, carry int) {
 	helper(res, l1, l2, carry)
 }
 
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	res := new(ListNode)
 	carry := 0

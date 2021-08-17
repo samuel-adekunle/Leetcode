@@ -14,14 +14,12 @@ func nextDay(cells []int) []int {
 	return newCells
 }
 
-
 func prisonAfterNDays(cells []int, N int) []int {
 	for i := 0; i < N; i++ {
 		cells = nextDay(cells)
 	}
 	return cells
 }
-
 
 func useMap(cells []int, N int) []int {
 	order := make(map[int][]int)

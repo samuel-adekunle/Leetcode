@@ -4,7 +4,6 @@ import (
 	"math"
 )
 
-
 func arrangeCoins(n int) int {
 	tri, i := 0, 0
 	for tri < n {
@@ -16,7 +15,6 @@ func arrangeCoins(n int) int {
 	}
 	return i
 }
-
 
 func binaryArrangeCoins(n int) int {
 	left, right := 0, n
@@ -34,7 +32,6 @@ func binaryArrangeCoins(n int) int {
 	}
 	return right
 }
-
 
 func mathArrangeCoins(n int) int {
 	return int(math.Sqrt(float64(2*n)+0.25) - 0.5)

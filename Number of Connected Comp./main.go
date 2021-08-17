@@ -6,7 +6,7 @@ func main() {
 	fmt.Println(countComponents(5, [][]int{
 		{0, 1},
 		{1, 2},
-		
+
 		{3, 4},
 	}))
 }
@@ -52,7 +52,6 @@ func countComponents(n int, edges [][]int) int {
 			dfs(i)
 		}
 	}
-
 
 	return count
 }

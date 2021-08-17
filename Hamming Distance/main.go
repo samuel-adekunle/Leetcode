@@ -5,8 +5,6 @@ import (
 	"strconv"
 )
 
-
-
 func hammingDistance(x int, y int) int {
 	return hammingWeight(booleanSum(x, y))
 }
@@ -51,7 +49,6 @@ func oneBitCount(x int) int {
 	}
 	return i
 }
-
 
 func xorDistance(x int, y int) int {
 	dist := x ^ y

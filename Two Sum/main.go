@@ -1,6 +1,5 @@
 package main
 
-
 func twoSum(nums []int, target int) []int {
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
@@ -12,7 +11,6 @@ func twoSum(nums []int, target int) []int {
 	return nil
 }
 
-
 func twoSumUseMap(nums []int, target int) []int {
 	mem := make(map[int]int)
 	for i, v := range nums {
@@ -23,7 +21,6 @@ func twoSumUseMap(nums []int, target int) []int {
 	}
 	return nil
 }
-
 
 func twoSumSorted(nums []int, target int) []int {
 	left, right := 0, len(nums)-1

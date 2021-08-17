@@ -25,7 +25,7 @@ func jump(nums []int) int {
 			return 0
 		}
 		if val, ok := cache[curr]; ok {
-			return  val
+			return val
 		}
 		minSteps := 100
 		for i := 1; i <= nums[curr] && curr+i <= target; i++ {

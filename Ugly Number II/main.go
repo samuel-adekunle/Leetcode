@@ -25,7 +25,6 @@ func sieve(n int) bool {
 	return false
 }
 
-
 func nthUglyNumber(n int) int {
 	i := 0
 	curr := 0
@@ -76,7 +75,6 @@ func combineSlices(arr1, arr2 []int) []int {
 	return merge
 }
 
-
 func triples(n int) int {
 	ugly := []int{0, 1, 2, 3, 5}
 	start := 2
@@ -104,7 +102,6 @@ func genUgly(numbers, starts, factors []int) (int, []int) {
 	}
 	return min, starts
 }
-
 
 func dp(n int) int {
 	factors := []int{2, 3, 5}

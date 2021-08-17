@@ -15,7 +15,6 @@ func removeDuplicates(nums []int) int {
 	return orig + 1
 }
 
-
 func onePass(nums []int) int {
 	i := 0
 	for _, v := range nums {

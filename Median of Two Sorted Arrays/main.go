@@ -29,7 +29,6 @@ func mergeSort(arr1, arr2 []int) []int {
 	return arr
 }
 
-
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	return median(mergeSort(nums1, nums2))
 }

@@ -4,7 +4,6 @@ import (
 	"math"
 )
 
-
 func bruteForce(s string) int {
 	acc := math.MinInt32
 	for i := 0; i < len(s); i++ {
@@ -20,9 +19,6 @@ func bruteForce(s string) int {
 	}
 	return acc
 }
-
-
-
 
 func slidingWindow(s string) int {
 	n := len(s)
@@ -41,17 +37,14 @@ func slidingWindow(s string) int {
 	return acc
 }
 
-
-
-
 func lengthOfLongestSubstring(s string) int {
 	n := len(s)
 	mem := map[byte]int{}
 	acc := 0
 	for i, j := 0, 0; j < n; j++ {
 		if v, ok := mem[s[j]]; ok {
-			
-			i = int(math.Max(float64(i), float64(v))) 
+
+			i = int(math.Max(float64(i), float64(v)))
 		}
 		acc = int(math.Max(float64(acc), float64(j-i+1)))
 		mem[s[j]] = j + 1

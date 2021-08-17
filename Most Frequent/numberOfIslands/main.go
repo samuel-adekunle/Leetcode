@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-
-
 func main() {
 	grid := [][]byte{
 		{'1', '1', '0', '1', '0'},
@@ -36,8 +34,8 @@ func helper(grid *[][]byte, i, j int) {
 		return
 	}
 	(*grid)[i][j] = '0'
-	helper(grid, i-1, j) 
-	helper(grid, i+1, j) 
-	helper(grid, i, j-1) 
+	helper(grid, i-1, j)
+	helper(grid, i+1, j)
+	helper(grid, i, j-1)
 	helper(grid, i, j+1)
 }

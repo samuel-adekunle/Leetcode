@@ -3,10 +3,10 @@ package main
 var globalGrid [][]int
 
 var dirs [][]int = [][]int{
-	{0, -1}, 
-	{-1, 0}, 
-	{0, 1},  
-	{1, 0}, 
+	{0, -1},
+	{-1, 0},
+	{0, 1},
+	{1, 0},
 }
 
 func helper(x, y int) int {

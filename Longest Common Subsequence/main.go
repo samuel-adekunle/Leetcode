@@ -23,7 +23,6 @@ func longestCommonSubsequence(text1 string, text2 string) int {
 	return dp[n][m]
 }
 
-
 func keepTwoRows(text1 string, text2 string) int {
 	n, m := len(text1), len(text2)
 	dp := make([][]int, 2)

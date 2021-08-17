@@ -20,7 +20,7 @@ func New(arr []int) (root *ListNode) {
 }
 
 func Length(list *ListNode) (length int) {
-	for ;list != nil;list = list.Next {
+	for ; list != nil; list = list.Next {
 		length++
 	}
 	return
@@ -56,15 +56,15 @@ func isEqual(a, b *ListNode) bool {
 func isPalindrome(head *ListNode) bool {
 	length := Length(head)
 	mid := head
-	for i := 0; i < (length) / 2; i++ {
+	for i := 0; i < (length)/2; i++ {
 		mid = mid.Next
 	}
-	if length > 0 && length % 2 == 0 {
+	if length > 0 && length%2 == 0 {
 		next := mid.Next
 		dummy := New([]int{mid.Val})
 		dummy.Next = next
 		mid.Next = dummy
-	}  
+	}
 	mid = Reverse(mid)
 	return isEqual(head, mid)
 }

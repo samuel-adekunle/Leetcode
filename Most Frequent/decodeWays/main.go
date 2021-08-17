@@ -4,8 +4,6 @@ import (
 	"fmt"
 )
 
-
-
 func main() {
 	s := "1111111111111111111111"
 	fmt.Printf("Number of decoding for %s: %d\n", s, numDecodings(s))
